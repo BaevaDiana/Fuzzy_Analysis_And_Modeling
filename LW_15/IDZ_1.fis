@@ -1,0 +1,54 @@
+[System]
+Name='IDZ_1'
+Type='mamdani'
+Version=2.0
+NumInputs=4
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Цена'
+Range=[0 1000]
+NumMFs=3
+MF1='NS':'trapmf',[-500 0 300 700]
+MF2='Z':'trapmf',[300 400 600 900]
+MF3='PS':'trapmf',[700 900 1000 1000]
+
+[Input2]
+Name='Качество'
+Range=[0 100]
+NumMFs=3
+MF1='NS':'trapmf',[-500 -0 20 50]
+MF2='Z':'trapmf',[30 40 60 80]
+MF3='PS':'trapmf',[70 80 100 100]
+
+[Input3]
+Name='input3'
+Range=[0 1]
+NumMFs=3
+MF1='mf1':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='mf2':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='mf3':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Input4]
+Name='input4'
+Range=[0 1]
+NumMFs=3
+MF1='mf1':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='mf2':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='mf3':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Output1]
+Name='output1'
+Range=[0 1]
+NumMFs=3
+MF1='mf1':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='mf2':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='mf3':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Rules]
